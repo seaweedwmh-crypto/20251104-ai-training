@@ -1,0 +1,24 @@
+.task-form {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .task-form {
+    max-width: 100%;
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-form {
+    padding: 10px;
+    margin: 5px;
+  }
+}

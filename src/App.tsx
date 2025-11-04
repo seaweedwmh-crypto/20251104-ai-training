@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Outlet, Link } from 'react-router-dom';
+import { Layout, Menu } from 'antd';
+import { TagsOutlined } from '@ant-design/icons';
+import './App.css';
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Layout className="app-container">
+      <Header className="app-header">
+        <div className="logo">任务管理应用</div>
+        <Menu 
+          theme="dark" 
+          mode="horizontal" 
+          defaultSelectedKeys={['tasks']}
+          items={[
+            {
+              key: 'tasks',
+              icon: <TagsOutlined />,
+              label: <Link to="/tasks">任务列表</Link>
+            }
+          ]}
+        />
+      </Header>
+      <Content className="app-main">
+        <div className="content-wrapper">
+          <Outlet />
+        </div>
+      </Content>
+      <Footer className="app-footer">
+        <p>© 2025 任务管理应用</p>
+      </Footer>
+    </Layout>
+  );
 }
 
-export default App
+export default App;
