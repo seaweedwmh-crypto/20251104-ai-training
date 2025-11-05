@@ -1,0 +1,20 @@
+{
+  "name": "20251104-ai-training",
+  "short_name": "AI Training",
+  "description": "AI Training Application",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4285f4",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "dir": "ltr",
+  "lang": "en-US"
+}
