@@ -7,16 +7,11 @@ import { visualizer } from 'rollup-plugin-visualizer'
 export default defineConfig({
   plugins: [
     react(),
-    VitePWA({
+    VitePWA({ 
       srcDir: 'src',
-      strategies: 'injectManifest',
+      strategies: 'generateSW',
       injectRegister: 'auto',
       manifest: false,
-      injectManifest: {
-        swSrc: 'src/sw.ts',
-        swDest: 'dist/sw.js',
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-      },
     }),
     visualizer({
       filename: 'dist/stats.html',

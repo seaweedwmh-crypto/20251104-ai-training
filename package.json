@@ -13,6 +13,7 @@
     "@types/workbox-window": "^4.3.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.5",
     "rollup-plugin-visualizer": "^6.0.5",
     "vite-plugin-pwa": "^1.1.0",
     "workbox-precaching": "^7.3.0",
